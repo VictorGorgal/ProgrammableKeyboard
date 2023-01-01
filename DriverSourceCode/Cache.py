@@ -14,6 +14,8 @@ class Cache:
     def map_keys(self, file_content):
         self.check_config_file(file_content)
 
+        self.keys_map = {}
+
         for line in file_content:
             key, function = line.split(':', 1)
             self.keys_map[key] = function
